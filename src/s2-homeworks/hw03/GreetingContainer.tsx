@@ -29,7 +29,7 @@ export const pureOnBlur = (name: string, setError: Dispatch<string>) => { // е�
 export const pureOnEnter = ({e, addUser}: { e: React.KeyboardEvent<HTMLInputElement>, addUser: any }) => { // если нажата кнопка Enter - добавить
 
     if (e.key === "Enter") {
-        addUser(e)
+        addUser(pureAddUser)
 
 
     }
