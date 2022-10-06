@@ -39,7 +39,7 @@ const HW3 = () => {
     const addUserCallback = (name: string) => { // need to fix any
         pureAddUserCallback(name, setUsers, users)
     }
-
+console.log(users)
     return (
         <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #3</div>

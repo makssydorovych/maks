@@ -28,7 +28,8 @@ min-height: 30px;
     display: flex;
     justify-content: center;
     margin-left: 20px;
-
+    height: 25px;
+    padding: 2px;
 }
 
 .button:focus {
