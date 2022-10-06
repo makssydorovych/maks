@@ -14,7 +14,7 @@ export const pureAddUser = (name: string, setError: Dispatch<string>, setName: D
     }else{
 
         addUserCallback(name)
-        setName(name)}
+        setName("")}
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
@@ -26,9 +26,9 @@ export const pureOnBlur = (name: string, setError: Dispatch<string>) => { // е�
 }
 
 export const pureOnEnter = ({e, addUser}: { e: React.KeyboardEvent<HTMLInputElement>, addUser: any }) => { // если нажата кнопка Enter - добавить
-    if(e.key === "Enter" ){
-        addUser(pureAddUser)
 
+    if(e.key === "Enter"){
+       addUser()
 
 
     }

@@ -27,8 +27,10 @@ export const pureAddUserCallback = (name: string, setUsers: Dispatch<SetStateAct
     const user = { // need to fix
         _id: v1(),
         name: name
+
     }
     setUsers([...users, user])
+    console.log(users)
 }
 
 const HW3 = () => {
@@ -45,9 +47,11 @@ const HW3 = () => {
 
             <div className={s2.hw}>
                 <GreetingContainer
+
                     users={users}
                     addUserCallback={addUserCallback}
                 />
+
             </div>
         </div>
     )
