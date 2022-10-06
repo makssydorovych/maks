@@ -3,6 +3,8 @@
 
 .inputAndButtonContainer {
     display: flex;
+margin-top: 20px;
+
 }
 
 .error {
@@ -10,7 +12,7 @@
 }
 
 .input {
-    min-height: 50px;
+min-height: 30px;
 }
 
 .input:focus {
@@ -23,7 +25,9 @@
 .button {
     background: #0066CC;
     color: white;
-    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
 
 }
 
@@ -35,6 +39,7 @@
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {

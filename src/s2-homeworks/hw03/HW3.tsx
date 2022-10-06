@@ -30,7 +30,7 @@ export const pureAddUserCallback = (name: string, setUsers: Dispatch<SetStateAct
 
     }
     setUsers([...users, user])
-    console.log(users)
+
 }
 
 const HW3 = () => {
