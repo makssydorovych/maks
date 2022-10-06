@@ -1,11 +1,11 @@
 import React from 'react'
 import {pureAddUser} from '../GreetingContainer'
 
-let name: any
+let name: string
 const setName = (a: any) => {
     name = a
 }
-let error: any
+let error: string
 const setError = (a: any) => {
     error = a
 }

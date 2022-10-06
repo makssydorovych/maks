@@ -2,9 +2,11 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
 }
 
 .error {
+    color: red;
 }
 
 .input {
@@ -14,9 +16,14 @@
 }
 
 .errorInput {
+
 }
 
 .button {
+    background: #0066CC;
+    color: white;
+    margin-left: 50px;
+    min-width: 50px;
 }
 
 .button:focus {
