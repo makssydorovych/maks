@@ -21,7 +21,7 @@ export const pureAddUser = (name: string, setError: Dispatch<string>, setName: D
 export const pureOnBlur = (name: string, setError: Dispatch<string>) => { // если имя пустое - показать ошибку
     if(name === ""){
 
-        setError("")
+        setError("Error")
     }
 }
 
@@ -47,7 +47,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        const userName = e.currentTarget.value
+        const userName = e.currentTarget.value.trim()
         if (userName) {
             setName(userName)
             setError('')

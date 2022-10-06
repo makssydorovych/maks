@@ -10,6 +10,7 @@
 }
 
 .input {
+    min-height: 50px;
 }
 
 .input:focus {
@@ -23,10 +24,11 @@
     background: #0066CC;
     color: white;
     margin-left: 50px;
-    min-width: 50px;
+
 }
 
 .button:focus {
+    color: red;
 }
 
 .button:active {
