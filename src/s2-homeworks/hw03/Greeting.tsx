@@ -10,7 +10,7 @@ type GreetingPropsType = {
     onEnter: (e:KeyboardEvent<HTMLInputElement>) => void // need to fix any
     error: string // need to fix any
     totalUsers: number // need to fix any
-    lastUserName?: any // need to fix any
+    lastUserName?: string // need to fix any
 }
 
 // презентационная компонента (для верстальщика)
@@ -65,7 +65,7 @@ console.log(lastUserName)
 
             {lastUserName && (
                 <div className={s.greeting}>
-                    Привет <span id={'hw3-last-user'}>{name}</span>!
+                    Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
             )}
         </div>
