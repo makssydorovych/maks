@@ -20,7 +20,7 @@ import GreetingContainer from './GreetingContainer'
 // types
 export type UserType = {
     _id: string // need to fix any
-    name: string // need to fix any
+    name?: string // need to fix any
 }
 
 export const pureAddUserCallback = (name: string, setUsers: Dispatch<SetStateAction<Array<UserType>>>, users: Array<UserType>) => { // need to fix any
