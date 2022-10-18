@@ -1,6 +1,6 @@
 .sidebar {
     float: left;
-    display: none;
+    opacity: 0;
 }
 
 .sidebar.open {
@@ -11,6 +11,7 @@
     width: 33%;
     height: 100%;
     border-right: 1px solid #58ACFF;
+    opacity: 1;
 
 
 }
