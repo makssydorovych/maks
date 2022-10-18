@@ -1,18 +1,15 @@
 .sidebar {
     float: left;
-    opacity: 0;
+    display: none;
 }
 
 .sidebar.open {
-    transition-duration: revert;
     display: block;
     position: absolute;
     background: white;
     width: 33%;
     height: 100%;
     border-right: 1px solid #58ACFF;
-    opacity: 1;
-
 
 }
 
@@ -49,6 +46,7 @@
     text-decoration-line: underline !important;
     color: #0059B2 !important;
 }
+
 .close {
     float: right;
     border: none;
