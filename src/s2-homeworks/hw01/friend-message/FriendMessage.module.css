@@ -31,18 +31,18 @@
     margin-right: 25px;
 }
 
-.friendText:after {
-    width: 0px;
-    height: 0px;
-    content: "";
-    position: absolute;
-    right: -3.5%;
-    top: 55%;
-    border-top: 20px solid transparent;
-    border-left: 40px solid #0066CC;
-    border-bottom: 1px solid transparent;
-    border-right: 1px solid transparent;
-}
+/*.friendText:after {*/
+/*    width: 0px;*/
+/*    height: 0px;*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    right: -3.5%;*/
+/*    top: 55%;*/
+/*    border-top: 20px solid transparent;*/
+/*    border-left: 40px solid #0066CC;*/
+/*    border-bottom: 1px solid transparent;*/
+/*    border-right: 1px solid transparent;*/
+/*}*/
 
 .friendName {
     color: white;
