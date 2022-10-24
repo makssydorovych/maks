@@ -1,5 +1,5 @@
 import React, {FC} from 'react'
-import {NavLink, useLocation} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import s from './Sidebar.module.css'
 import {PATH} from '../Pages'
 import closeIcon from './closeOutline.svg'
@@ -11,7 +11,7 @@ type PropsType = {
 }
 
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
-    const location = useLocation();
+
 
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
