@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maks/static/css/main.4b2073af.css",
-    "main.js": "/maks/static/js/main.70330e4c.js",
+    "main.css": "/maks/static/css/main.57860269.css",
+    "main.js": "/maks/static/js/main.e7308c02.js",
     "static/js/787.66cb4309.chunk.js": "/maks/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/maks/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/404.svg": "/maks/static/media/404.dae7af4892f2a3abe805a174178919f2.svg",
@@ -10,12 +10,12 @@
     "static/media/checked.svg": "/maks/static/media/checked.0b6a1bcf5d417ff0a947.svg",
     "index.html": "/maks/index.html",
     "static/media/burger.svg": "/maks/static/media/burger.e4e6b98e4ee0b2dfcd76d02a9eed2e34.svg",
-    "main.4b2073af.css.map": "/maks/static/css/main.4b2073af.css.map",
-    "main.70330e4c.js.map": "/maks/static/js/main.70330e4c.js.map",
+    "main.57860269.css.map": "/maks/static/css/main.57860269.css.map",
+    "main.e7308c02.js.map": "/maks/static/js/main.e7308c02.js.map",
     "787.66cb4309.chunk.js.map": "/maks/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b2073af.css",
-    "static/js/main.70330e4c.js"
+    "static/css/main.57860269.css",
+    "static/js/main.e7308c02.js"
   ]
 }
