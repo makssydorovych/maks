@@ -1,7 +1,10 @@
 .radio {
+    display: flex;
+    margin: 10px;
 }
 
 .radio::before {
+
 }
 
 
@@ -9,7 +12,9 @@
 }
 
 .label {
+    display: flex;
 }
 
-.options {
+.option {
+
 }

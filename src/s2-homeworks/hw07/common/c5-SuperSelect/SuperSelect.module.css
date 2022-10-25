@@ -1,9 +1,26 @@
 .select {
+    margin-right: 100px;
+    width: 100px;
+
 }
 
 .select:focus {
+
+
 }
 
+.select:hover {
 
-.option:hover {
+
+}
+.option{
+    outline: none;
+    border: 1px solid grey;
+
+}
+.option:hover{
+    background: white;
+}
+.option:checked{
+    background: white;
 }
