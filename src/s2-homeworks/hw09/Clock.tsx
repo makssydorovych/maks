@@ -12,7 +12,7 @@ function Clock() {
 
     const start = () => {
         stop();
-        const id: any = setInterval(()=>{
+        const id: number = +setInterval(()=>{
             setDate(new Date())
         }, 1000)
         setTimerId(id)
