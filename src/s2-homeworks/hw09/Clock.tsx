@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
-import {clearInterval} from "timers";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
@@ -22,7 +21,10 @@ function Clock() {
     }
 
     const stop = () => {
-        clearInterval(timerId)
+        if(timerId) {
+            clearInterval(timerId)
+            setTimerId(undefined)
+        }
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
 
     }
@@ -73,14 +75,14 @@ console.log(date)
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={Boolean(timerId)} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={false } // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!Boolean(timerId)} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
