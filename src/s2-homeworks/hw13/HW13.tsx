@@ -37,6 +37,7 @@ const HW13 = () => {
             setCode('Error!');
             setInfo('Network Error');
             setText('AxiosError');
+            setDisabled(false)
 
 
         }else{
