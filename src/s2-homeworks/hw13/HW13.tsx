@@ -37,28 +37,32 @@ const HW13 = () => {
         axios
             .post(url, {success: x})
             .then((res) => {
+                const responseText = JSON.stringify(res.data.errorText).replace(/"/g, "'");
+                const responseInfo = JSON.stringify(res.data.info).replace(/"/g, "'");
+
                 setImage(success200)
                 const text = JSON.stringify(res.data.errorText)
-                setText('...всё ок)')
-                setInfo(`${JSON.stringify(res.data.info)}`)
+                setText(responseText)
+                setInfo(responseInfo)
                 setCode(res.status.toString())
                 // дописать
             })
             .catch((e) => {
-                console.log(e.message)
+                console.log(e.response)
                 if (e.response) {
                     const {status} = e.response
-                    if (status === 400 && status < 500) {
+                    if (status >= 400 && status < 500) {
                         setCode('Ошибка' +  ' ' + status.toString())
                         setImage(error400)
-                    } else if (status === 500) {
+                    } else if (status >= 500) {
                         setCode('Ошибка' +  ' ' + status.toString())
                         setImage(error500)
-                    }else if (e.message === 'Network Error') {
+                    }else  {
                         setImage(errorUnknown)
                         setCode('Error!')
                         setText(e.message)
                         setInfo('AxiosError')
+
                     }
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
@@ -107,7 +111,7 @@ const HW13 = () => {
                     </SuperButton>
                     <SuperButton
                         id={'hw13-send-null'}
-                        onClick={send.bind(null, null)}// имитация запроса на не корректный адрес
+                        onClick={send(null)}// имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
                         disabled={disabled}
