@@ -36,7 +36,7 @@ const HW12 = () => {
     }, [themeId])
    
     
-console.log(themeId);
+
 
     return (
         
