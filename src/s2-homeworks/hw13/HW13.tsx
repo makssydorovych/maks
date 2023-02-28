@@ -32,16 +32,22 @@ const HW13 = () => {
         setText('')
         setInfo('...loading')
         setDisabled(true)
+        if (x === null) {
+            setImage(errorUnknown);
+            setCode('Error!');
+            setInfo('Network Error');
+            setText('AxiosError');
 
+
+        }else{
 
         axios
             .post(url, {success: x})
             .then((res) => {
+
                 const responseText = JSON.stringify(res.data.errorText).replace(/"/g, "'");
                 const responseInfo = JSON.stringify(res.data.info).replace(/"/g, "'");
-
                 setImage(success200)
-                const text = JSON.stringify(res.data.errorText)
                 setText(responseText)
                 setInfo(responseInfo)
                 setCode(res.status.toString())
@@ -57,12 +63,6 @@ const HW13 = () => {
                     } else if (status >= 500) {
                         setCode('Ошибка' +  ' ' + status.toString())
                         setImage(error500)
-                    }else  {
-                        setImage(errorUnknown)
-                        setCode('Error!')
-                        setText(e.message)
-                        setInfo('AxiosError')
-
                     }
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
@@ -71,7 +71,7 @@ const HW13 = () => {
             .finally(() => {
                 setDisabled(false)
             })
-    }
+    }}
 
     return (
         <div id={'hw13'}>
