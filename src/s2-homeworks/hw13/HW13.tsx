@@ -34,44 +34,44 @@ const HW13 = () => {
         setDisabled(true)
 
 
-        axios
-            .post(url, {success: x})
-            .then((res) => {
+            axios
+                .post(url, {success: x})
+                .then((res) => {
+                    const responseText = JSON.stringify(res.data.errorText).replace(/"/g, "'");
+                    const responseInfo = JSON.stringify(res.data.info).replace(/"/g, "'");
+                    setImage(success200)
+                    setText('...всё ок)')
+                    setInfo(responseInfo)
+                    setCode(res.status.toString())
 
-                const responseText = JSON.stringify(res.data.errorText).replace(/"/g, "'");
-                const responseInfo = JSON.stringify(res.data.info).replace(/"/g, "'");
-                setImage(success200)
-                setText('...всё ок)')
-                setInfo(responseInfo)
-                setCode(res.status.toString())
-                // дописать
-            })
-            .catch((e) => {
-                console.log(e.response)
-                if (e.response) {
-                    const {status} = e.response
-                    if (status >= 400 && status < 500) {
-                        setCode('Ошибка' +  ' ' + status.toString())
-                        setImage(error400)
-                    } else if (status >= 500) {
-                        setCode('Ошибка' +  ' ' + status.toString())
-                        setImage(error500)
-                    }else   if (x === null) {
-                        setDisabled(true)
-                        setImage(errorUnknown);
-                        setCode('Error!');
-                        setInfo('Network Error');
-                        setText('AxiosError');
+                    // дописать
+                })
+                .catch((e) => {
 
+                    if (e.response) {
+                        const {status} = e.response
+                        if (status >= 400 && status < 500) {
+                            setCode('Ошибка' + ' ' + status.toString())
+                            setImage(error400)
+                        } else if (status >= 500) {
+                            setCode('Ошибка' + ' ' + status.toString())
+                            setImage(error500)
+                        }   if (x === null) {
+                            setDisabled(true)
+                            setImage(errorUnknown);
+                            setCode('Error!');
+                            setInfo('Network Error');
+                            setText('AxiosError');
+                        }
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                     }
-                    setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
-                }
-            })
-            .finally(() => {
-                setDisabled(false)
-            })
-    }
+                })
+                .finally(() => {
+                    setDisabled(false)
+                })
+        }
+
 
     return (
         <div id={'hw13'}>
