@@ -41,7 +41,7 @@ const HW13 = () => {
                     const responseInfo = JSON.stringify(res.data.info).replace(/"/g, "'");
                     setImage(success200)
                     setText('...всё ок)')
-                    setInfo(responseInfo)
+                    setInfo('код 200 - обычно означает что скорее всего всё ок)')
                     setCode(res.status.toString())
 
                     // дописать
@@ -53,9 +53,13 @@ const HW13 = () => {
                         if (status >= 400 && status < 500) {
                             setCode('Ошибка' + ' ' + status.toString())
                             setImage(error400)
+                            setText(e.response.data.errorText)
+                            setInfo(e.response.data.info)
                         } else if (status >= 500) {
                             setCode('Ошибка' + ' ' + status.toString())
                             setImage(error500)
+                            setText(e.response.data.errorText)
+                            setInfo(e.response.data.info)
                         }   if (x === null) {
                             setDisabled(true)
                             setImage(errorUnknown);
@@ -63,8 +67,7 @@ const HW13 = () => {
                             setInfo('Network Error');
                             setText('AxiosError');
                         }
-                        setText(e.response.data.errorText)
-                        setInfo(e.response.data.info)
+
                     }
                 })
                 .finally(() => {
