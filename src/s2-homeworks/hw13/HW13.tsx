@@ -38,7 +38,8 @@ const HW13 = () => {
             .post(url, {success: x})
             .then((res) => {
                 setImage(success200)
-                setText(`${JSON.stringify(res.data.errorText)}`)
+                const text = JSON.stringify(res.data.errorText)
+                setText('...всё ок)')
                 setInfo(`${JSON.stringify(res.data.info)}`)
                 setCode(res.status.toString())
                 // дописать
@@ -55,11 +56,10 @@ const HW13 = () => {
                         setImage(error500)
                     }else if (e.message === 'Network Error') {
                         setImage(errorUnknown)
-                        setCode('Error')
+                        setCode('Error!')
                         setText(e.message)
                         setInfo('AxiosError')
                     }
-
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
                 }
@@ -107,7 +107,7 @@ const HW13 = () => {
                     </SuperButton>
                     <SuperButton
                         id={'hw13-send-null'}
-                        onClick={send(null)} // имитация запроса на не корректный адрес
+                        onClick={send.bind(null, null)}// имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
                         disabled={disabled}

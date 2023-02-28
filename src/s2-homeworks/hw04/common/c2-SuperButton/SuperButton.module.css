@@ -1,5 +1,4 @@
 .button {
-
     border: none;
     color: white;
     height: 30px;
@@ -7,7 +6,7 @@
     left: 574px;
     top: 1465px;
     border-radius: 3px;
-    padding: 5px 24px 5px 24px;
+
     margin: 10px;
 
 }
